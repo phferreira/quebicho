@@ -50,20 +50,35 @@ class MyHomePage extends StatelessWidget {
                             left: 20.0,
                             right: 20.0,
                             bottom: 10.0,
-                          ),
+                          ),                      
                           child: new Container(
                             height: 60.0,
                             alignment: Alignment.center,
                             decoration: new BoxDecoration(
                               color: Color(0xFF18D191),
                               borderRadius: new BorderRadius.circular(10.0),
-                            ),
-                            child: new Text(                        
-                              "Login com Email", 
-                              style: new TextStyle(
-                                fontSize: 20.0,
-                                color: Colors.white,
-                              ),
+                            ),       
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                new Padding(
+                                  padding: EdgeInsets.all(5),
+                                  child: Icon(
+                                    Icons.face,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                new Padding(
+                                  padding: EdgeInsets.all(5),
+                                  child: Text(                        
+                                    "Login com Email", 
+                                    style: new TextStyle(
+                                      fontSize: 20.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -87,12 +102,27 @@ class MyHomePage extends StatelessWidget {
                               color: Color(0xFF4364A1),
                               borderRadius: new BorderRadius.circular(10.0),
                             ),
-                            child: new Text(                        
-                              "Facebook", 
-                              style: new TextStyle(
-                                fontSize: 20.0,
-                                color: Colors.white,
-                              ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                new Padding(
+                                  padding: EdgeInsets.all(5),
+                                  child: Icon(
+                                    Icons.accessible,
+                                    color: Colors.white,
+                                  ), 
+                                ),
+                                new Padding(
+                                  padding: EdgeInsets.all(5),
+                                  child: new Text(                        
+                                    "Facebook", 
+                                    style: new TextStyle(
+                                      fontSize: 20.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -112,12 +142,27 @@ class MyHomePage extends StatelessWidget {
                               color: Color(0xFFDF513B ),
                               borderRadius: new BorderRadius.circular(10.0),
                             ),
-                            child: new Text(                        
-                              "Google", 
-                              style: new TextStyle(
-                                fontSize: 20.0,
-                                color: Colors.white,
-                              ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                new Padding(
+                                  padding: EdgeInsets.all(5),
+                                  child: Icon(
+                                    Icons.account_circle,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                new Padding(
+                                  padding: EdgeInsets.all(5),
+                                  child: new Text(                        
+                                    "Google", 
+                                    style: new TextStyle(
+                                      fontSize: 20.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
