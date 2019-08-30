@@ -2,7 +2,27 @@ import 'package:QueBicho/controller/emailpagecontroller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class PrincipalPage extends StatelessWidget {
+class PrincipalPage extends StatefulWidget {
+  @override
+  _PrincipalPageState createState() => _PrincipalPageState();
+}
+
+class _PrincipalPageState extends State<PrincipalPage> {
+  
+  int _currentIndex = 0;
+
+  List<Widget> _tabList = [
+    Container(
+      color: Colors.teal,
+    ),
+    Container(
+      color: Colors.red,
+    ),
+    Container(
+      color: Colors.purple,
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -166,14 +186,30 @@ class PrincipalPage extends StatelessWidget {
           ],
         ),
       ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Container(
-              color: Colors.blue,
-            ),
-          ],
-        ),
+      body: _tabList[_currentIndex],      
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black26,
+        currentIndex: _currentIndex,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.home),
+            title: Text('Home'),
+          ),
+          BottomNavigationBarItem(          
+            icon: Icon(Icons.camera_alt),
+            title: Text('Camera'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.book),
+            title: Text('Album'),
+          ), 
+        ],
+        onTap: (currentIndex){
+          setState(() {
+            _currentIndex = currentIndex;
+          }); 
+        }
       ),
     );
   }
