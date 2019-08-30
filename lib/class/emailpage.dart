@@ -42,30 +42,13 @@ class _EmailPageState extends State<EmailPage> {
                           horizontal: 0.0,
                           vertical: 20.0,
                         ),
-                        child: CupertinoTextField(
-                          controller: EmailPageController.email,  
-                          // textAlign: TextAlign.left,
-                          
-                          placeholder: 'INFORME SEU EMAIL',
-                          padding: EdgeInsets.only(
-                            left: 20.0
+                        child: TextField(
+                          controller: EmailPageController.email,
+                          decoration: InputDecoration(
+                            labelText: 'Email',
+                            hintText: 'INFORME SEU EMAIL',
+                            hintStyle: TextStyle(color: Colors.grey),
                           ),
-                          style: TextStyle(
-                            fontSize: 30.0,
-
-                          ),                        
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50.0),
-                            color: Colors.black12,
-
-
-                          ),
-                          // decoration: InputDecoration(
-                          //   labelText: 'Email',
-                          //   // border: InputBorder.none,
-                          //   hintText: 'INFORME SEU EMAIL',
-                          //   hintStyle: TextStyle(color: Colors.grey),
-                          // ),
                         ),
                       ),
                       Padding(
@@ -93,9 +76,6 @@ class _EmailPageState extends State<EmailPage> {
                             Expanded(
                               child: CupertinoButton(
                                 onPressed: (){
-                                  // return AlertDialog(
-                                  //   content: Text(EmailPageController.email.text),
-                                  // );
                                   if ((EmailPageController.email.text == 'email@email.com') &&
                                      (EmailPageController.senha.text == 'senha')){
                                     Navigator.push(
@@ -135,8 +115,7 @@ class _EmailPageState extends State<EmailPage> {
                                 ),
                               ),
                             ],
-                          ),
-                        // ],                        
+                          ),                       
                       ),
                     ],
                   ),
